@@ -26,6 +26,7 @@ html,body{
 	height:100%;
 }
 .nav{
+	position:relative;
 	height:38px;
 	width:100%;
 	background-color:#c0ac96;
@@ -53,7 +54,7 @@ html,body{
 	padding:0 5px;
 }
 .nav .n-content li a:hover{
-	color:#355a2d;
+	color:#3f604f;
 }
 .content{
 	position: relative;
