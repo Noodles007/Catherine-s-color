@@ -59,17 +59,10 @@ html,body{
 .content{
 	position: relative;
 	width:100%;
-	height:670px;
-	background:url("web-xueyang2.jpg") right top no-repeat;
+	height:1080px;
+	background:url("web-xueyang1.jpg") center top no-repeat;
 }
-.content .shadow{
-	position:absolute;
-	top:0;
-	bottom:0;
-	width:100%;
-	background-color:rgba(170,150,120,0.2);
 
-}
 .content .c-content{
 	position:relative;
 	width:1200px;
