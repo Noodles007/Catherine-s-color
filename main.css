@@ -1,4 +1,4 @@
-html,body,div,ul{
+html,body,div,ul,p{
 	margin:0;
 	padding:0;
 }
@@ -21,31 +21,38 @@ li{
 .co{
 	color:#357655;
 }
+.rel{
+	position:relative;
+}
+.abs{
+	position:absolute;
+}
 html,body{
 	width:100%;
 	height:100%;
+	background: #dee3df url(dingxueyang.jpg) no-repeat bottom right;
 }
 .nav{
-	position:relative;
 	height:38px;
 	width:100%;
 	background-color:#c0ac96;
 	border-bottom:solid 2px #fcf3d6;
 }
 .nav .n-content{
-	width:1200px;
+	width:80%;
 	height:100%;
 	margin:0 auto;
 }
 .nav .n-content ul{
 	width:100%;
 	height:100%;
+	overflow:hidden;
 }
 .nav .n-content li{
 	display:inline-block;
-	padding-right:70px;
+	padding-right:8%;
 	height:36px;
-	font:bold  14px/36px "sans" ;
+	font:bold  14px/36px sans-serif ;
 }
 .nav .n-content li a{
 	display:inline-block;
@@ -57,21 +64,18 @@ html,body{
 	color:#3f604f;
 }
 .content{
-	position: relative;
 	width:100%;
-	height:1080px;
-	background:url("web-xueyang1.jpg") center top no-repeat;
+	height:90%;
+	cursor:default;
 }
 
 .content .c-content{
-	position:relative;
-	width:1200px;
-	height: 670px;
+	width:80%;
+	height:100%;
 	margin:0 auto;
 	color:white;
 }
 .content .c-content .logo{
-	position:absolute;
 	top:50px;
 	left:0;
 	width:90px;
@@ -81,12 +85,79 @@ html,body{
 	text-align:center;
 }
 .content .c-content .logo span{
-	font:18px/65px "sans";
+	font:18px/65px purisa,sans-serif;
 }
-.footer{
-	width:100%;
-	background-color:#2c3339;
-	position:absolute;
-	bottom:0;
+ .content .c-content .poster{
+ 	top:25%;
+ 	left:1em;
+ 	width:100%;
+ 	font:italic bold 2.5em/56px Arial,Helvetica,sans-serif;
+}
 
+ .content .c-blackboard{
+	width:50%;
+	height:40%;
+	bottom:50px;
+ 	background-color:#40604f;
+ 	border:solid 8px #a95e28; 
+ 	box-shadow:inset 1px 2px 4px black,2px 3px 6px black;
+ }
+ .content .c-blackboard .b-slide{
+ 	display:none;
+ 	width:100%;
+ 	margin:5% 0 0 10%;
+ 	font:18px/36px Purisa,sans-serif;
+ 	overflow:hidden;
+ }
+ .content .c-blackboard .b-slide h2~p{
+ 	margin-left:3em;
+ }
+ .content .c-blackboard .b-slide.dis{
+ 	display:block;
+ }
+ .content .c-content .slidebar{
+ 	position:fixed;
+ 	bottom:30px;
+ 	right:5px;
+ 	width:100px;
+ 	height:120px;
+ 	background:url(wx.jpg) no-repeat;
+ }
+ .content .c-content .slidebar .wx{
+ 	position:absolute;
+ 	bottom:0;
+ 	width:100%;
+ 	height:20px;
+ 	font:12px/20px sans-serif;
+ 	text-align:center;
+ 	color:black;
+ }
+
+.footer{
+	position:fixed;
+	width:100%;
+	height:30px;
+	background-color:#333333;
+	bottom:0;
+}
+.footer .f-content{
+	width:100%;
+	margin:0 auto;
+	font:12px/30px sans-serif;
+	text-align:center;
+	color:#aaa;
+}
+.footer .f-content a{
+	font:12px/30px sans-serif;
+	color:#aaa;
+}
+
+@media screen and(max-width:1030px){
+	body{
+	background: #dee3df url(dingxueyang2.jpg) no-repeat bottom right;
+	}
+	.content .c-content .poster{
+	 	font:italic bold 12px/24px Arial,Helvetica,sans-serif;
+
+	}
 }
