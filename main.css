@@ -152,12 +152,23 @@ html,body{
 	color:#aaa;
 }
 
-@media screen and(max-width:1030px){
+@media screen and (max-width: 1200px) and (min-width:960px){
 	body{
 	background: #dee3df url(dingxueyang2.jpg) no-repeat bottom right;
 	}
 	.content .c-content .poster{
-	 	font:italic bold 12px/24px Arial,Helvetica,sans-serif;
-
+	 	font:italic bold 32px/48px Arial,Helvetica,sans-serif;
+	
 	}
+	.content .c-blackboard .b-slide h2~p{
+ 		margin-left:2em;
+ 	}
+}
+@media screen and (max-width: 960px){
+	body{
+		background: #dee3df url(dingxueyang3.jpg) no-repeat top right;
+	}
+	.content .c-content .poster{
+	 	font:italic bold 30px/48px Arial,Helvetica,sans-serif;
+
 }
