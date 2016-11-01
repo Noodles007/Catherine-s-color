@@ -30,7 +30,8 @@ li{
 html,body{
 	width:100%;
 	height:100%;
-	background: #dee3df url(dingxueyang.jpg) no-repeat bottom right;
+	background: #dee3df url(images/dingxueyang.jpg) no-repeat bottom right;
+	background-size: 700px 681px;
 }
 .nav{
 	height:38px;
@@ -52,7 +53,7 @@ html,body{
 	display:inline-block;
 	padding-right:8%;
 	height:36px;
-	font:bold  14px/36px sans-serif ;
+	font:bold  14px/38px sans-serif ;
 }
 .nav .n-content li a{
 	display:inline-block;
@@ -68,7 +69,6 @@ html,body{
 	height:90%;
 	cursor:default;
 }
-
 .content .c-content{
 	width:80%;
 	height:100%;
@@ -83,6 +83,7 @@ html,body{
 	border-radius:50%;
 	background-color:rgba(0,0,0,0.7);
 	text-align:center;
+	z-index: 99;
 }
 .content .c-content .logo span{
 	font:18px/65px purisa,sans-serif;
@@ -92,8 +93,10 @@ html,body{
  	left:1em;
  	width:100%;
  	font:italic bold 2.5em/56px Arial,Helvetica,sans-serif;
+ 	text-shadow: 1px 1px 1px #666;
+ 	text-overflow: clip;
+ 	white-space: nowrap;
 }
-
  .content .c-blackboard{
 	width:50%;
 	height:40%;
@@ -104,10 +107,13 @@ html,body{
  }
  .content .c-blackboard .b-slide{
  	display:none;
- 	width:100%;
+ 	width:90%;
  	margin:5% 0 0 10%;
- 	font:18px/36px Purisa,sans-serif;
+ 	font:18px/36px sans-serif;
  	overflow:hidden;
+ }
+ .content .c-blackboard .b-slide h2{
+ 	font-family: Purisa,"Comic Sans MS";
  }
  .content .c-blackboard .b-slide h2~p{
  	margin-left:3em;
@@ -121,7 +127,7 @@ html,body{
  	right:5px;
  	width:100px;
  	height:120px;
- 	background:url(wx.jpg) no-repeat;
+ 	background:url(images/wx.jpg) no-repeat;
  }
  .content .c-content .slidebar .wx{
  	position:absolute;
@@ -130,9 +136,8 @@ html,body{
  	height:20px;
  	font:12px/20px sans-serif;
  	text-align:center;
- 	color:black;
+ 	color:#333;
  }
-
 .footer{
 	position:fixed;
 	width:100%;
@@ -151,10 +156,9 @@ html,body{
 	font:12px/30px sans-serif;
 	color:#aaa;
 }
-
 @media screen and (max-width: 1200px) and (min-width:960px){
 	body{
-	background: #dee3df url(dingxueyang2.jpg) no-repeat bottom right;
+		background-size:500px 486px;
 	}
 	.content .c-content .poster{
 	 	font:italic bold 32px/48px Arial,Helvetica,sans-serif;
@@ -166,9 +170,56 @@ html,body{
 }
 @media screen and (max-width: 960px){
 	body{
-		background: #dee3df url(dingxueyang3.jpg) no-repeat top right;
+		background: #dee3df url(images/dingxueyang.jpg) no-repeat 100% 15% ;
+		background-size:300px 292px;
+	}
+	.nav .n-content{
+		width:90%;
+	}
+	.nav .n-content li{
+		display:inline-block;
+		padding-right:5%;
+		height:36px;
+		font:bold  13px/36px sans-serif ;
+	}
+	.content .c-content{
+		width:90%;
+	}
+	.content .c-content .logo{
+		left:0px;
+		width:70px;
+		height:45px;
+	}
+	.content .c-content .logo span{
+		font:16px/45px purisa,sans-serif;
 	}
 	.content .c-content .poster{
-	 	font:italic bold 30px/48px Arial,Helvetica,sans-serif;
-
+	 	top:35%;
+	 	left:0;
+	 	font:italic bold 20px/38px Arial,Helvetica,sans-serif;
+	}
+	.content .c-blackboard{
+		box-sizing: border-box;
+		width:95%;
+		height:40%;
+		bottom:5%;
+		margin:0 auto;
+		border:solid 5px #a95e28;
+ 		overflow:hidden;
+ 		text-overflow:clip;
+ 	}
+	.content .c-blackboard .b-slide{
+ 		width:95%;
+ 		margin:2% 0 0 5%;
+ 		font:14px/32px sans-serif;
+	 }
+ 	.content .c-blackboard .b-slide h2~p{
+ 		margin-left:1.5em;
+ 	}
+	.content .c-content .slidebar{
+		display:none;
+	}
+	.footer .f-content a{
+		font:10px/30px sans-serif;
+	}
 }
