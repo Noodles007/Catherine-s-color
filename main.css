@@ -1,4 +1,4 @@
-html,body,div,ul,p{
+html,body,div,ul,h2,p{
 	margin:0;
 	padding:0;
 }
@@ -98,25 +98,56 @@ html,body{
  	white-space: nowrap;
 }
  .content .c-blackboard{
-	width:50%;
-	height:40%;
+	width:55%;
+	height:45%;
 	bottom:50px;
- 	background-color:#40604f;
+ 	background:#405c4f url("./images/chalk.png") right bottom no-repeat;
  	border:solid 8px #a95e28; 
  	box-shadow:inset 1px 2px 4px black,2px 3px 6px black;
+ 	overflow:hidden;
  }
- .content .c-blackboard .b-slide{
- 	display:none;
- 	width:90%;
- 	margin:5% 0 0 10%;
+ .content .c-blackboard span.date{
+ 	display:inline-block;
+	position: absolute;
+	top:14px;
+	right:14px;
+	width: 12px;
+	height:70px;
+	text-align:center;
+	font:12px/15px 宋体，sans-serif;
+ }
+ .content .c-blackboard span.duty{
+	display: inline-block;	
+	position: absolute;
+	top:14px;
+	right:35px;
+	width:12px;
+	height:50px;
+	text-align:center;
+	font:12px/15px 宋体，sans-serif;
+ }
+ .content .c-blackboard .slide{
+ 	height:100%;
+ }
+ .content .c-blackboard .slide .b-slide{
+ 	height:100%;
  	font:18px/36px sans-serif;
  	overflow:hidden;
  }
- .content .c-blackboard .b-slide h2{
+ .content .c-blackboard .b-slide .s-content{
+ 	width:80%;
+ 	height: 100%;
+ 	margin:40px 0 0 60px;
+ }
+ .content .c-blackboard .b-slide .s-content h2{
+ 	line-height:75px;
  	font-family: Purisa,"Comic Sans MS";
  }
+ .content .c-blackboard .b-slide .s-content span{
+ 	color:#f3cf01;
+ }
  .content .c-blackboard .b-slide h2~p{
- 	margin-left:3em;
+ 	margin-left:2em;
  }
  .content .c-blackboard .b-slide.dis{
  	display:block;
@@ -156,6 +187,29 @@ html,body{
 	font:12px/30px sans-serif;
 	color:#aaa;
 }
+
+
+
+
+
+
+
+
+/*Contact section*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*响应式*/
+
 @media screen and (max-width: 1200px) and (min-width:960px){
 	body{
 		background-size:500px 486px;
@@ -164,9 +218,6 @@ html,body{
 	 	font:italic bold 32px/48px Arial,Helvetica,sans-serif;
 	
 	}
-	.content .c-blackboard .b-slide h2~p{
- 		margin-left:2em;
- 	}
 }
 @media screen and (max-width: 960px){
 	body{
@@ -200,20 +251,36 @@ html,body{
 	}
 	.content .c-blackboard{
 		box-sizing: border-box;
-		width:95%;
-		height:40%;
+		width:100%;
+		height:42%;
 		bottom:5%;
 		margin:0 auto;
 		border:solid 5px #a95e28;
  		overflow:hidden;
  		text-overflow:clip;
  	}
-	.content .c-blackboard .b-slide{
+	.content .c-blackboard span.date{
+		right:5px;
+		font:10px/13px 宋体，sans-serif;
+	} 
+	.content .c-blackboard span.duty{
+		right:20px;
+		font:10px/13px 宋体，sans-serif;
+	}
+	 
+	.content .c-blackboard .slide .b-slide {
  		width:95%;
- 		margin:2% 0 0 5%;
  		font:14px/32px sans-serif;
 	 }
- 	.content .c-blackboard .b-slide h2~p{
+	.content .c-blackboard .slide .b-slide .s-content{
+		width:90%;
+ 		margin:5px 0 0 20px;
+
+	}
+ 	.content .c-blackboard .b-slide .s-content h2{
+ 		line-height:55px;
+ 	}
+ 	.content .c-blackboard .b-slide .s-content h2~p{
  		margin-left:1.5em;
  	}
 	.content .c-content .slidebar{
