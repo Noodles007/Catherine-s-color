@@ -1,0 +1,70 @@
+.form-content{
+	width:55%;
+	height:45%;
+	bottom: 50px;
+	background-color:rgba(50,50,50,1); 
+	border-radius: 10px;
+	box-shadow: 0px 0px 7px 2px #c97E48;
+}
+.form-content:hover{
+	box-shadow: 0px 0px 10px 3px #c97E48;
+}
+.form-content form{
+	width:70%;
+	position:relative;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	font:16px sans-serif;
+	overflow: hidden;
+}
+form .form-element{
+	margin-bottom: 10px;
+	height:40px;
+}
+form label{
+	display: inline-block;
+	margin-right:10px;
+	line-height:40px;
+	width:100px;
+	text-align: right;
+	color: #c97E48;
+}
+form input{
+	height:30px;
+	width:300px;
+	border-radius:3px;
+	border:solid 1px #A95E28;
+	box-sizing: border-box;
+	outline:none;
+}
+form input:hover{
+	box-shadow: 0 0 3px 1px #A95E28;
+}
+form .form-text{
+	margin-bottom:20px;
+}
+form textarea {
+	resize: none;
+	outline:none;
+	width:300px;
+	height: 60px;
+	border-radius:3px;
+	border:solid 1px #A95E28;
+	vertical-align:text-top;/*标签与文本框顶部对齐*/
+}
+form .form-btn{
+	width: 80px;
+	position: relative;
+	left:50%;
+	transform: translateX(-50%);
+}
+form .form-btn input{
+	height:30px;
+	width:80px;
+	margin:0 auto;
+	background-color:#c97E48;
+	cursor:pointer;
+	font:14px sans-serif;
+	color:white;
+}
