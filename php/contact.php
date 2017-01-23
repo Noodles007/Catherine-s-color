@@ -7,6 +7,6 @@
 	$email=$_POST[hisemail];
 	$tel=$_POST[histel];
 	$txt=$_POST[message];
-	$sql="insert into contact(hisname,hisemail,histel,message) values('$name','$email','$tel','$txt')";
+	$sql="insert into contact(hisname,hisEmail,histel,message) values('$name','$email','$tel','$txt')";
 	$mysqli->query($sql);
 ?>		

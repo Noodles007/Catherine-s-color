@@ -41,29 +41,37 @@
 			<div class="poster abs">
 				<p>Knowledge changes the world<br/><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Education changes the future</span></p>
 			</div>
+			<!--表单-->
 			<div class="form-content abs">
-				<form method="post" action="php/contact.php" target="iframe" autocomplete="off" accept-charset="utf-8">
+				<form method="post" action="php/contact.php" target="iframe" autocomplete="off" accept-charset="utf-8" required>
 					<div class="form-element">
 						<label for="hisname">Your Name:</label>	
-						<input type="" name="hisname" required>
+						<div class="input-border" required>
+							<input type="text" name="hisname">
+						</div>
 					</div>
 					<div class="form-element">
 						<label for="hisemail">Email:</label>	
-						<input type="" name="hisemail" required>
+						<div class="input-border" required>
+							<input type="text" name="hisemail">
+						</div>
 					</div>
 					<div class="form-element">
 						<label for="histel">TEL:</label>	
-						<input type="" name="histel" requierd>
+						<div class="input-border" required>
+							<input type="text" name="histel">
+						</div>
 					</div>
 					<div class="form-text">
-						<label for="mesage" >Message Box:</label>	
-						<textarea name="message"></textarea>
+						<label for="message" >Message Box:</label>	
+						<textarea name="message" required></textarea>
 					</div>
 					<div class="form-btn">
-						<input type="submit" name="btn"> 
+						<input type="submit" name="btn" value="Submit"> 
 					</div>
 				</form>
 			</div>
+			<!--表单-->
 			<div class="slidebar">
 				<div class="wx">微信联系管理员</div>
 			</div>

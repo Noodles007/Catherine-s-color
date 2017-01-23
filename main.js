@@ -1,9 +1,67 @@
+//获得id 元素
 function $(id){
 	return document.getElementById(id);
 }
+//获得类元素
 function getClassElements(element,classname){
 	return element.getElementsByClassName(classname);
 }
+
+//兼容IE5/6 创建XMLHttpRequest封装对象
+function createXhr(){
+	if(typeof XMLHttpRequest != 'undefined'){
+		return new XMLHttpRequest();
+	}
+	else if(typeof ActiveXObject != 'undefined'){
+		if(typeof arguments.callee.activeXstring != 'string'){
+			var versions=["Msxl2.XMLHTTP.6.0","Msxl2.XMLHTTP.3.0","Msxl2.XMLHTTP"];
+			var i=0;
+			for(i;i<versions.length;i++){
+				try{
+					new ActiveXObject(versions[i]);
+					arguments.callee.activeXstring=versions[i];
+					break;
+				}catch(ex){
+					//跳过	
+				}	
+			}
+		}
+		return new ActiveXObject(arguments.callee.activeXstring);
+	} 
+	else{
+		throw new Error("Please update your browser!");
+	}
+}
+//encodeURIcomponent编码对象 封装
+function encodeFormData(data){
+	if(!data){
+		return '';
+	}
+	else{
+		var pairs=[];
+		for(var name in data){
+			if(!data.hasOwnProperty(name)) continue;
+			if(typeof data[name]==="function") continue;
+			var value=data[name].toString();
+			name=encodeURIcomponent(name.replace("20%","+"));
+			value=encodeURIcomponent(value.replace("20%","+"));
+			pairs.push(name+"="+value);
+		}
+		return pairs.join("&");
+	}
+}
+
+//实现 ajax get 封装函数
+function ajaxGet(url){
+	var request=createXhr();
+	request.open("GET",url);
+	request.setRequestHeader("Content-Type","text/plain");
+	request.send(null);
+
+}
+
+
+//轮播
 (function(){
 	var autoplay=true;
 	var SPEED=50;
