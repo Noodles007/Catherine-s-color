@@ -28,7 +28,7 @@ function createXhr(){
 		}
 		return new ActiveXObject(arguments.callee.activeXstring);
 	} 
-	else{
+	getElementsByClassName{
 		throw new Error("Please update your browser!");
 	}
 }
